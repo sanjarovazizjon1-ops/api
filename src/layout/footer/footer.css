@@ -1,0 +1,330 @@
+.footer {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.footer-benefits {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 140px;
+  padding: 35px 30px 105px;
+  box-sizing: border-box;
+}
+
+.benefit-item {
+  width: 240px;
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+  background: #000;
+  border: 8px solid #d1d1d1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 22px;
+}
+
+.benefit-item h3 {
+  margin: 0 0 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.benefit-item p {
+  margin: 0;
+
+  font-size: 12px;
+  color: #333;
+}
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-main {
+  background: #000;
+  color: #fff;
+  padding-top: 58px;
+}
+
+.footer-container {
+  max-width: 1060px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    1.3fr
+    1.3fr
+    1fr
+    1fr
+    1.3fr;
+
+  gap: 45px;
+
+  padding: 0 30px 60px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   COLUMNS
+========================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h2 {
+  margin: 0 0 22px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-column h3 {
+  margin: 0 0 20px;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer-column h4 {
+  margin: 0 0 17px;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-column p {
+  margin: 0 0 14px;
+
+  font-size: 13px;
+  line-height: 1.7;
+  color: #eee;
+}
+
+.footer-column a {
+  color: #eee;
+  text-decoration: none;
+
+  font-size: 13px;
+
+  margin-bottom: 14px;
+
+  transition: 0.2s;
+}
+
+.footer-column a:hover {
+  color: #aaa;
+}
+
+/* =========================
+   SUBSCRIBE
+========================= */
+
+.exclusive > p {
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+
+.subscribe-box {
+  width: 162px;
+  height: 37px;
+
+  border: 1px solid #fff;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.subscribe-box input {
+  width: 125px;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #fff;
+
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  font-size: 12px;
+}
+
+.subscribe-box input::placeholder {
+  color: #777;
+}
+
+.subscribe-box button {
+  width: 37px;
+  height: 100%;
+
+  border: none;
+  background: transparent;
+  color: #fff;
+
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   DOWNLOAD APP
+========================= */
+
+.download small {
+  font-size: 9px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.app-download {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.qr-code {
+  width: 58px;
+  height: 58px;
+
+  background: #fff;
+  color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.stores {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.store {
+  width: 95px;
+  height: 25px;
+
+  border: 1px solid #777;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+  color: #fff;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-icons {
+  display: flex;
+  gap: 22px;
+
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0;
+
+  font-size: 18px;
+  color: #fff;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+  border-top: 1px solid #222;
+
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #555;
+
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer-benefits {
+    gap: 50px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .footer-benefits {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 35px;
+
+    padding-bottom: 60px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-column {
+    align-items: flex-start;
+  }
+
+  .copyright {
+    font-size: 10px;
+    text-align: center;
+  }
+}
