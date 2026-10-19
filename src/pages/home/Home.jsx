@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from "react";
-import Hero from "../../components/hero/Hero";
 import { getProduct } from "../../api/ProductApi";
 import Products from "../../components/products/Product";
+import Hero from '../../components/hero/Hero'
 
 export default function Home() {
   const [data, setData] = useState([]);
