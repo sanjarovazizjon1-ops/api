@@ -1,24 +1,17 @@
 
-export default function LoadingButton({
-  loading,
-  children,
-  onClick,
-  
-}) {
+import "./loadingbutton.css";
+
+function LoadingButton({ isLoading, children, onClick }) {
   return (
     <button
+      className="btn"
       onClick={onClick}
-      disabled={loading}
-      className={`loading-button ${className}`}
+      disabled={isLoading}
     >
-      {loading ? (
-        <>
-          <span className="spinner"></span>
-          Loading...
-        </>
-      ) : (
-        children
-      )}
+      {isLoading && <span className="spinner"></span>}
+      {isLoading ? "Loading..." : children}
     </button>
   );
 }
+
+export default LoadingButton;

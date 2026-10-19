@@ -1,36 +1,42 @@
+      
+import { Link } from "react-router-dom";
+import "./Product.css";
+import LoadingButton from "../loading/LoadingButton";
 
-import Product from "./Product";
-import LoadingButton from "../../components/loading/LoadingButton";
+export default function Products({ products, setLimit, loading }) {
+  function renderProducts(products) {
+    return products?.map((product) => {
+      return <ProductItem key={product.id} product={product} />;
+    });
+  }
 
-
-export default function Products({
-  products,
-  setPage,
-  loading,
-  hasMore,
-}) {
   return (
-    <section className="products-section">
-      <h2>Our Products</h2>
-
-      <div className="products">
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            product={product}
-          />
-        ))}
+    <section>
+      <div className="products-grid">
+        {renderProducts(products)}
       </div>
 
-      {hasMore && (
-        <LoadingButton
-          loading={loading}
-          onClick={() => setPage((prev) => prev + 1)}
-          className="view-all"
-        >
-          View All Products
-        </LoadingButton>
-      )}
+      <LoadingButton
+        isLoading={loading}
+        onClick={() => setLimit((prev) => prev + 8)}
+      >
+        View More
+      </LoadingButton>
     </section>
+  );
+}
+
+function ProductItem({ product }) {
+  return (
+    <Link className="link" to={`/details/${product.id}`}>
+      <div className="card">
+        <div>
+          <img src={product.img} alt="" />
+        </div>
+
+        <h3>{product.title}</h3>
+        <p>{product.price}</p>
+      </div>
+    </Link>
   );
 }
